@@ -11,27 +11,36 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./build/tailwind.css" />
     <script
       src="https://kit.fontawesome.com/afbae0cb27.js"
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <img src="./images/logo.svg" alt="" />
-        <ul>
+    <header class="p-5">
+      <nav class="flex items-center">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-bars fa-lg" style="color: #000000"></i>
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <ul
+          class="flex flex-col items-end gap-5 fixed p-8 top-[0%] left-0 text-lg font-semibold bg-slate-200/30 backdrop-blur-sm w-full min-h-[25%] -translate-x-full"
+        >
+          <i class="fa-solid fa-xmark fa-xl" style="color: #000000"></i>
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <img src="./images/icon-cart.svg" alt="" />
-        <img src="./images/image-avatar.png" alt="" />
+        <div class="flex items-center gap-4 ml-auto">
+          <img src="./images/icon-cart.svg" alt="" />
+          <img src="./images/image-avatar.png" alt="" class="w-7" />
+        </div>
       </nav>
     </header>
     <main>
@@ -41,32 +50,38 @@
         <img src="./images/image-product-3.jpg" alt="" />
         <img src="./images/image-product-4.jpg" alt="" />
       </section>
-      <section class="content-section">
-        <span>Sneaker Company</span>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>
+      <section class="content-section p-8">
+        <span class="text-slate-500 uppercase tracking-widest font-semibold"
+          >Sneaker Company</span
+        >
+        <h1 class="text-xl font-semibold my-5">Fall Limited Edition Sneakers</h1>
+        <p class="text-slate-500 leading-7">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <div>
-          <p>$125.00<span>50%</span></p>
-
-          <del>$250.00</del>
+        <div class="flex items-center justify-between my-3">
+          <div class="flex items-center gap-1">
+            <p class="font-bold text-2xl">$125.00</p>
+            <span class="ml-4 bg-black text-slate-100 px-2 py-1 rounded-md font-bold"
+              >50%</span
+            >
+          </div>
+          <del class="text-slate-500 font-bold text-lg">$250.00</del>
         </div>
-        <div>
-          <div>
+        <div class="flex flex-col gap-2">
+          <div class="bg-slate-200/30 w-full p-4 rounded-md flex items-end justify-between">
             <button>
               <i class="fa-solid fa-minus" style="color: #ff7d1a"></i>
             </button>
-            <span>0</span>
+            <span class="font-semibold">0</span>
 
             <button>
               <i class="fa-solid fa-plus" style="color: #ff7d1a"></i>
             </button>
           </div>
 
-          <button>Add to cart</button>
+          <button class="font-semibold bg-orange-500 w-full p-4 rounded-md"><i class="fa-solid fa-cart-plus mr-3" style="color: #000000;"></i>Add to cart</button>
         </div>
       </section>
     </main>
