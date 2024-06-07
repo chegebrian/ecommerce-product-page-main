@@ -20,17 +20,27 @@
     <script src="script.js" defer></script>
     <title>Frontend Mentor | E-commerce product page</title>
   </head>
-  <body>
+  <body class="md:w-10/12 md:mx-auto">
     <header class="p-5">
-      <nav class="flex items-center">
+      <nav class="flex items-center md:gap-9">
         <div class="flex items-center gap-3">
-          <i class="fa-solid fa-bars fa-lg" style="color: #000000"></i>
+          <div class="md:hidden">
+            <i class="fa-solid fa-bars fa-lg" style="color: #000000"></i>
+          </div>
           <img src="./images/logo.svg" alt="" />
         </div>
         <ul
-          class="flex flex-col items-end gap-5 fixed p-8 top-[0%] left-0 text-lg font-semibold bg-slate-200/30 backdrop-blur-sm w-full min-h-[25%] -translate-x-full"
+          class="flex flex-col items-end gap-5 fixed p-8 top-[0%] left-0 text-lg font-semibold bg-slate-200/30 backdrop-blur-sm w-full min-h-[25%] -translate-x-full md:translate-x-0 md:flex-row md:items-center md:bg-transparent md:backdrop-blur-0 md:relative md:p-0 md:text-slate-500"
         >
-          <i class="fa-solid fa-xmark fa-xl" style="color: #000000"></i>
+          <li>
+            <a class="md:hidden"
+              ><i
+                class="fa-solid fa-xmark fa-xl md:hidden"
+                style="color: #000000"
+              ></i
+            ></a>
+          </li>
+
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
@@ -43,34 +53,65 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main class="md:flex md:items-center md:gap-8 md:min-w-80">
       <section class="product-image">
-        <img src="./images/image-product-1.jpg" alt="" />
-        <img src="./images/image-product-2.jpg" alt="" />
-        <img src="./images/image-product-3.jpg" alt="" />
-        <img src="./images/image-product-4.jpg" alt="" />
+        <div class="relative overflow-hidden">
+          <div class="flex justify-between items-center inset-0 p-4 absolute">
+            <button
+              class="rounded-full bg-slate-100 p-4 w-8 h-8 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button
+              class="rounded-full bg-slate-100 p-4 w-8 h-8 flex items-center justify-center ml-auto"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <img
+            src="./images/image-product-1.jpg"
+            alt=""
+            class="md:rounded-lg md:min-w-80"
+          />
+        </div>
+        <div
+          class="thumbnail md:flex md:gap-4 md:items-center md:justify-center md:mt-8 hidden"
+        >
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            alt=""
+            class="rounded-lg w-16"
+          />
+        </div>
       </section>
-      <section class="content-section p-8">
+      <section class="content-section p-8 md:p-0">
         <span class="text-slate-500 uppercase tracking-widest font-semibold"
           >Sneaker Company</span
         >
-        <h1 class="text-xl font-semibold my-5">Fall Limited Edition Sneakers</h1>
+        <h1 class="text-xl font-semibold my-5">
+          Fall Limited Edition Sneakers
+        </h1>
         <p class="text-slate-500 leading-7">
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
           the weather can offer.
         </p>
-        <div class="flex items-center justify-between my-3">
+        <div
+          class="flex items-center justify-between my-3 md:flex-col md:items-start"
+        >
           <div class="flex items-center gap-1">
             <p class="font-bold text-2xl">$125.00</p>
-            <span class="ml-4 bg-black text-slate-100 px-2 py-1 rounded-md font-bold"
+            <span
+              class="ml-4 bg-black text-slate-100 px-2 py-1 rounded-md font-bold"
               >50%</span
             >
           </div>
           <del class="text-slate-500 font-bold text-lg">$250.00</del>
         </div>
-        <div class="flex flex-col gap-2">
-          <div class="bg-slate-200/30 w-full p-4 rounded-md flex items-end justify-between">
+        <div class="flex flex-col gap-2 lg:flex-row">
+          <div
+            class="bg-slate-200/30 w-full p-4 rounded-md flex items-end justify-between"
+          >
             <button>
               <i class="fa-solid fa-minus" style="color: #ff7d1a"></i>
             </button>
@@ -81,7 +122,10 @@
             </button>
           </div>
 
-          <button class="font-semibold bg-orange-500 w-full p-4 rounded-md"><i class="fa-solid fa-cart-plus mr-3" style="color: #000000;"></i>Add to cart</button>
+          <button class="font-semibold bg-orange-500 w-full p-4 rounded-md">
+            <i class="fa-solid fa-cart-plus mr-3" style="color: #000000"></i>Add
+            to cart
+          </button>
         </div>
       </section>
     </main>
