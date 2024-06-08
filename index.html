@@ -24,16 +24,16 @@
     <header class="p-5">
       <nav class="flex items-center md:gap-9">
         <div class="flex items-center gap-3">
-          <div class="md:hidden">
+          <div class="md:hidden cursor-pointer open-menu">
             <i class="fa-solid fa-bars fa-lg" style="color: #000000"></i>
           </div>
           <img src="./images/logo.svg" alt="" />
         </div>
         <ul
-          class="flex flex-col items-end gap-5 fixed p-8 top-[0%] left-0 text-lg font-semibold bg-slate-200/30 backdrop-blur-sm w-full min-h-[25%] -translate-x-full md:translate-x-0 md:flex-row md:items-center md:bg-transparent md:backdrop-blur-0 md:relative md:p-0 md:text-slate-500"
+          class="ul-elements z-50 transition-all ease-linear flex flex-col items-end gap-5 fixed p-8 top-[0%] left-0 text-lg font-semibold bg-slate-200/30 backdrop-blur-sm w-full min-h-[25%] -translate-x-full md:translate-x-0 md:flex-row md:items-center md:bg-transparent md:backdrop-blur-0 md:relative md:p-0 md:text-slate-500"
         >
           <li>
-            <a class="md:hidden"
+            <a class="md:hidden close-menu"
               ><i
                 class="fa-solid fa-xmark fa-xl md:hidden"
                 style="color: #000000"
@@ -53,9 +53,9 @@
         </div>
       </nav>
     </header>
-    <main class="md:flex md:items-center md:gap-8 md:min-w-80">
-      <section class="product-image">
-        <div class="relative overflow-hidden">
+    <main class="md:flex md:items-center md:gap-8  md:justify-center md:mx-auto">
+      <section class="product-image-section">
+        <!-- <div class="relative overflow-hidden">
           <div class="flex justify-between items-center inset-0 p-4 absolute">
             <button
               class="rounded-full bg-slate-100 p-4 w-8 h-8 flex items-center justify-center"
@@ -82,7 +82,7 @@
             alt=""
             class="rounded-lg w-16"
           />
-        </div>
+        </div> -->
       </section>
       <section class="content-section p-8 md:p-0">
         <span class="text-slate-500 uppercase tracking-widest font-semibold"
